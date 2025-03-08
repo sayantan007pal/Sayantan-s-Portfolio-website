@@ -1,0 +1,108 @@
+<!-- 
+  Home Component Template
+  This template displays your personal information, skills, and experience
+-->
+<section class="hero">
+  <div class="hero-content">
+    <!-- Left side profile information -->
+    <div class="hero-text">
+      <h1>Hello, I'm <span class="highlight">{{ profile?.firstName }} {{ profile?.lastName }}</span></h1>
+      <h2>{{ profile?.headline }}</h2>
+      <p>{{ profile?.summary }}</p>
+      <div class="hero-cta">
+        <a routerLink="/projects" class="btn primary">View Projects</a>
+        <a routerLink="/contact" class="btn secondary">Contact Me</a>
+      </div>
+    </div>
+    
+    <!-- Profile picture -->
+    <div class="hero-image">
+      <img [src]="profile?.profilePicture || 'assets/images/profile.jpg'" alt="Profile Photo">
+    </div>
+  </div>
+</section>
+
+<!-- Skills section -->
+<section class="skills">
+  <h2>Skills</h2>
+  <div class="skills-container">
+    <div *ngFor="let skill of profile?.skills" class="skill-tag">
+      {{ skill }}
+    </div>
+  </div>
+</section>
+
+<!-- GitHub section - conditionally displayed if GitHub profile is available -->
+<section class="github-activity" *ngIf="!error">
+  <div *ngIf="loading" class="loading">
+    <p>Loading GitHub data...</p>
+  </div>
+  
+  <div *ngIf="error" class="error-message">
+    <p>{{ error }}</p>
+    <p>Using mock GitHub data instead.</p>
+  </div>
+  
+  <!-- Display mock GitHub data instead of live data -->
+  <h2>GitHub Activity</h2>
+  
+  <div class="github-profile">
+    <img [src]="'assets/images/profile.jpg'" alt="GitHub Profile" class="github-avatar">
+    <div class="github-info">
+      <h3><a [href]="'https://github.com/' + githubUsername" target="_blank">{{ profile?.firstName }} {{ profile?.lastName }}</a></h3>
+      <p>{{ profile?.summary.substring(0, 100) }}...</p>
+      <div class="github-stats">
+        <div class="stat">
+          <span class="stat-count">12</span>
+          <span class="stat-label">Repositories</span>
+        </div>
+        <div class="stat">
+          <span class="stat-count">24</span>
+          <span class="stat-label">Followers</span>
+        </div>
+        <div class="stat">
+          <span class="stat-count">18</span>
+          <span class="stat-label">Following</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="recent-repos">
+    <h3>Recent Projects</h3>
+    <div class="repo-list">
+      <!-- Use the projects data from profile instead of GitHub repos -->
+      <div *ngFor="let project of profile?.projects" class="repo-card">
+        <h4>{{ project.title }}</h4>
+        <p>{{ project.description }}</p>
+        <div class="repo-details">
+          <span class="language" *ngIf="project.technologies.length > 0">{{ project.technologies[0] }}</span>
+          <span class="date">{{ project.date }}</span>
+        </div>
+        <div class="repo-topics">
+          <span *ngFor="let tech of project.technologies" class="topic">{{ tech }}</span>
+        </div>
+      </div>
+    </div>
+    <a [href]="'https://github.com/' + githubUsername" target="_blank" class="view-all">View GitHub Profile</a>
+  </div>
+</section>
+
+<!-- Experience section -->
+<section class="experience">
+  <h2>Experience</h2>
+  <div class="timeline">
+    <div *ngFor="let job of profile?.experience" class="timeline-item">
+      <div class="timeline-content">
+        <h3>{{ job.title }}</h3>
+        <h4>{{ job.company }}</h4>
+        <p class="date">{{ formatDate(job.startDate) }} - {{ job.endDate === 'Present' ? 'Present' : formatDate(job.endDate) }}</p>
+        <p class="location">{{ job.location }}</p>
+        <p>{{ job.description }}</p>
+        <div class="job-skills">
+          <span *ngFor="let skill of job.skills" class="skill-pill">{{ skill }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
