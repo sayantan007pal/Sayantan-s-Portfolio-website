@@ -3,6 +3,14 @@
 
 This is a fully customizable portfolio website built with Angular. You can easily customize it with your own information and host it on any domain.
 
+<img width="1352" alt="Screenshot 2025-03-01 at 3 18 58 AM" src="https://github.com/user-attachments/assets/f8a112d3-07d0-4272-b0d5-8212594020b4" />
+
+<img width="1352" alt="Screenshot 2025-03-01 at 3 20 09 AM" src="https://github.com/user-attachments/assets/c8f65a99-13e8-4d45-8b3a-df0e6f4e1ac8" />
+<img width="1352" alt="Screenshot 2025-03-01 at 3 20 38 AM" src="https://github.com/user-attachments/assets/94e4db63-fef1-4d96-9415-c63277abdd8d" />
+<img width="1352" alt="Screenshot 2025-03-01 at 3 19 33 AM" src="https://github.com/user-attachments/assets/be217ff2-7402-4209-b9f9-ddb669750a05" />
+<img width="1352" alt="Screenshot 2025-03-01 at 3 19 58 AM" src="https://github.com/user-attachments/assets/454dff75-7d22-4bc8-bee2-d1924e0ed67d" />
+<img width="1352" alt="Screenshot 2025-03-01 at 3 20 56 AM" src="https://github.com/user-attachments/assets/507d7464-59ec-4daf-af5d-a570c60ee1b1" />
+
 ## Getting Started
 
 ### Prerequisites
