@@ -17,7 +17,7 @@
     
     <!-- Profile picture -->
     <div class="hero-image">
-      <img [src]="profile?.profilePicture || 'assets/images/profile.jpg'" alt="Profile Photo">
+      <img [src]="profile?.profilePicture || 'assets/images/profile.jpeg'" alt="Profile Photo">
     </div>
   </div>
 </section>
@@ -47,7 +47,7 @@
   <h2>GitHub Activity</h2>
   
   <div class="github-profile">
-    <img [src]="'assets/images/profile.jpg'" alt="GitHub Profile" class="github-avatar">
+    <img [src]="'assets/images/profile.jpeg'" alt="GitHub Profile" class="github-avatar">
     <div class="github-info">
       <h3><a [href]="'https://github.com/' + githubUsername" target="_blank">{{ profile?.firstName }} {{ profile?.lastName }}</a></h3>
       <!-- Safe use of profile summary with null checks -->

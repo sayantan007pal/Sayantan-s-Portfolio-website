@@ -104,7 +104,7 @@ export class LinkedinService {
       // IMPORTANT: Replace with your own profile picture
       // Option 1: Use a URL - 'https://example.com/your-photo.jpg'
       // Option 2: Use local file - 'assets/images/profile.jpg'
-      profilePicture: 'assets/images/profile.jpg',
+      profilePicture: 'assets/images/profile.jpeg',
       summary: 'Electronics and Communication Engineering student with expertise in Data Science, Machine Learning, FPGA design, and web development. Currently gaining experience as a Backend Intern at Prismforce, working with Angular, TypeScript, and Node.js. Experienced in implementing various ML algorithms, statistical analysis, and hardware design using Verilog. Passionate about leveraging technology to solve complex problems and drive innovation.',
       skills: [
         'Python', 'Machine Learning', 'Data Science', 'Verilog', 'FPGA Design', 
