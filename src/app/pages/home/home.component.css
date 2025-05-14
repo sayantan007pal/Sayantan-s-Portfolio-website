@@ -84,15 +84,17 @@
 }
 
 .hero-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 20px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
   box-shadow: 0 8px 30px var(--shadow-color);
   transition: transform 0.3s ease;
 }
 
 .hero-image img:hover {
-  transform: scale(1.02);
+  transform: scale(1.04);
 }
 
 /* Skills Section */
@@ -188,7 +190,10 @@
 .github-avatar {
   width: 100px;
   height: 100px;
+  object-fit: cover;
   border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 4px 16px var(--shadow-color);
   margin-right: 2rem;
 }
 
